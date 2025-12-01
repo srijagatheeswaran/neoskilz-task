@@ -1,16 +1,33 @@
-# React + Vite
+# Mini LMS + Resume Score Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✅ Logic Used
 
-Currently, two official plugins are available:
+### **Course Listing**
+- 3 dummy courses are stored in an array.
+- Each course shows **name, duration, image, and a "View Details" button**.
+- Clicking the button opens a modal using React state to show full details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **Resume Score Checker**
+- Uses React state to store **resume text, job title, score, loading, and errors**.
 
-## React Compiler
+#### **Validation**
+- Job title is required.  
+- Resume must have at least **10 words**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### **Scoring**
+- +50 if resume contains the job title.  
+- +10 each for keywords: **experience, skills, project**.  
+- Final score is **scaled to 100**.
 
-## Expanding the ESLint configuration
+#### **Extra Logic**
+- Dynamic score messages.  
+- Score color based on score value.  
+- Word count is calculated.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 How to Run the Code
+
+```bash
+npm install
+npm run dev
